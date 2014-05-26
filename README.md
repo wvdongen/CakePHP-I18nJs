@@ -17,7 +17,7 @@ Translate strings to the page language or a given language.
 Examples:
 ```Javascript
 I18nJs.t('This string needs transalation');
-I18nJs.t('Welcome @name', {@name: 'Wouter'});
+I18nJs.t('Welcome @name', {'@name': 'Wouter'});
 ```
 
 ### I18nJs.t(count, singular, plural, args, options)
