@@ -1,0 +1,21 @@
+{
+	"name": "wvdongen/cakephp-i18njs",
+	"description": "Translate JavaScript strings like Drupal 8.",
+	"type": "cakephp-plugin",
+	"keywords": ["cakephp", "i18n", "i18njs", "translate"],
+	"homepage": "https://github.com/wvdongen/CakePHP-I18nJs",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Wouter van Dongen",
+			"homepage": "https://www.dongit.nl",
+			"role": "Author"
+		}
+	],
+	"require": {
+		"php": ">=5.4"
+	},
+	"extra": {
+		"installer-name": "I18nJs"
+	}
+}
