@@ -65,9 +65,9 @@ class ExtractJsTask extends ExtractTask {
 
 		// todo: not only webroot
 		$dir = new Folder(APP . 'webroot' . DS . 'js');
-		$files = $dir->find('.*\.js');
-		foreach ($files as $file) {
-			$this->_locale_parse_js_file($dir->pwd() . DS . $file);
+		$files = $dir->findRecursive('.*\.js');
+		foreach ($files as $filepath) {
+			$this->_locale_parse_js_file($filepath);
 		}
 
 		// Create POT file
