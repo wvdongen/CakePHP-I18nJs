@@ -30,10 +30,9 @@ class CreateJsTask extends AppShell {
 				$file = new File($file);
 
 				// Get language
-				if (preg_match('%Locale/(.*?)/LC_MESSAGES%', $file->path, $regs)) {
+				if (preg_match('%Locale' . preg_quote(DS) . '(.*?)' . preg_quote(DS) . 'LC_MESSAGES%', $file->path, $regs)) {
 					$language = $regs[1];
-				}
-				else {
+				} else {
 					// todo return
 					$this->out(__d('i18n_js', '<error>Unable to determine language of PO file:</error>') . $file->path);
 					return;
@@ -71,8 +70,7 @@ class CreateJsTask extends AppShell {
 			$data .= "'strings': " . json_encode($msgids, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT) . " };";
 			if ($outputFile->write($data)) {
 				$this->out(__d('i18n_js', '<info>%s created</info>', $outputFile->path));
-			}
-			else {
+			} else {
 				$this->out(__d('i18n_js', '<error>Unable to write: %s</error>', $outputFile->path));
 			}
 		}
