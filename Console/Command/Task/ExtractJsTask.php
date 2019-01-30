@@ -64,8 +64,8 @@ class ExtractJsTask extends ExtractTask {
 		$this->_translations = array();
 
 		// todo: not only webroot
-		$dir = new Folder(APP . 'webroot' . DS . 'js');
-		$files = $dir->findRecursive('.*\.js');
+		$dir = new Folder(APP);
+		$files = $dir->findRecursive('.js|.ctp');
 		foreach ($files as $filepath) {
 			$this->_locale_parse_js_file($filepath);
 		}
