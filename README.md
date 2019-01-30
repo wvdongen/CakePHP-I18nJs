@@ -41,7 +41,7 @@ This will parse all the javascript translation functions from your .js and .ctp 
 Make sure your translations are located in `App/Locale/<language>/LC_MESSAGES/i18n_js.po`.
 
 ```php
-Console/cake I18nJs.i18n_js generate_js
+Console/cake I18nJs.i18n_js create_js
 ```
 
 This will create JavaScript file(s) as `App/webroot/js/Locale/i18n_js.<language>.js`. 
