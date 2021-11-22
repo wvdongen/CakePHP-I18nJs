@@ -172,7 +172,7 @@ class PoParser {
 							break;
 					}
 
-					continue;
+					continue 2;
 
 				// context
 				// Allows disambiguations of different messages that have same msgid.
